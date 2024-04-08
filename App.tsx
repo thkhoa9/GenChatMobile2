@@ -13,7 +13,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen key="Home" name="Home"  component={Home}  />
+      <Stack.Screen key="Home" name="Home" component={Home}  />
       </Stack.Navigator>
     </NavigationContainer>
   );

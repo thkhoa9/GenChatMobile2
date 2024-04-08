@@ -120,7 +120,7 @@ export default function SignUp({ navigation }) {
   return (
     <ScrollView contentContainerStyle={styles.flexGrow1}>
       <View style={styles.container}>
-        <div id="recaptcha-container"></div>
+        <View id="recaptcha-container"></View>
 
         <View style={[styles.marginSide]}>
           <Image source={GlobalAsset.logo} style={styles.logo}></Image>
