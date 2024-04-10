@@ -15,8 +15,8 @@ export default function PhoneInput({ navigation }) {
     <ScrollView contentContainerStyle={styles.flexGrow1}>
       <View style={styles.container}>
         <View style={[styles.twoLogoWrapper, styles.marginSide]}>
-          <Image source={GlobalAsset.logo} style={styles.logo}></Image>
-          <Image source={{uri:user.photoURL}} style={styles.logo}></Image>
+          {/* <Image source={GlobalAsset.logo} style={styles.logo}></Image> */}
+          {/* <Image source={{uri:undefined}} style={styles.logo}></Image> */}
         </View>
         
         <Text style={[styles.title, styles.marginSide, styles.fontColor]}>Welcome, {user.displayName}</Text>

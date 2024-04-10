@@ -14,7 +14,7 @@ export default function ChatUserDetail({ navigation }) {
           padding: 10, 
         }}
       >
-        <Image
+        {/* <Image
           source={{
             uri: GlobalAsset.defaultLogoImage
           }}
@@ -24,7 +24,7 @@ export default function ChatUserDetail({ navigation }) {
             aspectRatio: 1 / 1, 
           }}
         >
-        </Image>
+        </Image> */}
 
         <Text>Nguyen Thanh Khoa</Text>
       </View>

@@ -92,7 +92,7 @@ export default function ForgotPassword({ navigation }) {
 
         </div> */}
         <View style={[styles.twoLogoWrapper, styles.marginSide]}>
-          <Image source={GlobalAsset.logo} style={styles.logo}></Image>
+          {/* <Image source={GlobalAsset.logo} style={styles.logo}></Image> */}
         </View>
         
         <Text style={[styles.title, styles.marginSide, styles.fontColor]}>Forgot Password</Text>

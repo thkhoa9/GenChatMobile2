@@ -28,7 +28,7 @@ export default function GlobalStyle() {
             marginRight: margin,
         }, 
         bolder: {
-            fontWeight: 'bolder'
+            // fontWeight: 'bolder'
         }, 
         fontColor: {
             color: fontColor
@@ -62,7 +62,7 @@ export default function GlobalStyle() {
         },
         title: {
             fontSize: 32,
-            fontWeight: 'bold'
+            // fontWeight: 'bold'
         },
         inputComponent: {
             gap: 10,
@@ -87,7 +87,7 @@ export default function GlobalStyle() {
         btnSubmit: {
             color: '#ffffff',
             fontSize: 20,
-            fontWeight: 'bold',
+            // fontWeight: 'bold',
             padding: 10,
         },
 
@@ -124,7 +124,7 @@ export default function GlobalStyle() {
         btnGoogle: {
             color: '#121212',
             fontSize: 20,
-            fontWeight: 'bold',
+            // fontWeight: 'bold',
             padding: 10,
         }, 
         googleIcon: {

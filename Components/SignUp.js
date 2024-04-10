@@ -123,7 +123,7 @@ export default function SignUp({ navigation }) {
         <View id="recaptcha-container"></View>
 
         <View style={[styles.marginSide]}>
-          <Image source={GlobalAsset.logo} style={styles.logo}></Image>
+          {/* <Image source={GlobalAsset.logo} style={styles.logo}></Image> */}
         </View>
 
         <Text style={[styles.title, styles.marginSide, styles.fontColor]}>

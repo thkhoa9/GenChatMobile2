@@ -19,9 +19,7 @@ import GlobalStyle from "../GlobalStyle.js";
 import GlobalAsset from "../GlobalAsset.js";
 
 import auth from "../firebase/config.js";
-//
-import axios from "axios";
-// import loginUser from "../services/loginUser.js";
+import loginUser from "../services/userLogin.js";
 export default function SignIn({ navigation }) {
   // console.log(auth);
   const [phoneNumber, onChangePhoneNumber] = useState("");
@@ -57,7 +55,7 @@ export default function SignIn({ navigation }) {
   };
   const handleSignIn = async () => {
     try {
-      // const user = await loginUser(phoneNumber, password);
+      const user = await loginUser(phoneNumber, password);
       // Đăng ký thành công, chuyển hướng đến màn hình đăng nhập
       navigation.navigate("Main", {user});
     } catch (error) {
@@ -70,7 +68,7 @@ export default function SignIn({ navigation }) {
     <ScrollView contentContainerStyle={styles.flexGrow1}>
       <View style={[styles.container]}>
         <View style={[styles.marginSide]}>
-          <Image source={GlobalAsset.logo} style={styles.logo}></Image>
+          {/* <Image source={GlobalAsset.logo} style={styles.logo}></Image> */}
         </View>
 
         <Text style={[styles.title, styles.marginSide, styles.fontColor]}>

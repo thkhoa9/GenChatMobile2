@@ -30,11 +30,11 @@ export default function Profile({ navigation }) {
           alignItems: 'center', 
           justifyContent: 'center'
         }]}>
-          <Image source={{ uri: '' }} style={{
+          {/* <Image source={{ uri: undefined }} style={{
             width: 100, 
             borderRadius: 50, 
             aspectRatio: 1 / 1
-          }}></Image>
+          }}></Image> */}
         </View>
         
         <View style={{

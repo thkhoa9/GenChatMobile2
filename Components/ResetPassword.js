@@ -59,7 +59,7 @@ export default function ResetPassword({ navigation }) {
     <ScrollView contentContainerStyle={styles.flexGrow1}>
       <View style={styles.container}>
         <View style={[styles.marginSide]}>
-          <Image source={GlobalAsset.logo} style={styles.logo}></Image>
+          {/* <Image source={GlobalAsset.logo} style={styles.logo}></Image> */}
         </View>
         
         <Text style={[styles.title, styles.marginSide, styles.fontColor]}>Reset Password</Text>

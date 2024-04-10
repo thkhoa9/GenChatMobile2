@@ -14,7 +14,7 @@ export default function ChatUser({ navigation }) {
         gap: 10
       }}
     >
-      <Image
+      {/* <Image
         source={{
           uri: GlobalAsset.defaultLogoImage
         }}
@@ -24,7 +24,7 @@ export default function ChatUser({ navigation }) {
           aspectRatio: 1 / 1, 
         }}
       >  
-      </Image>
+      </Image> */}
       <View
         style={{
           flex: 1, 
