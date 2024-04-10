@@ -19,7 +19,7 @@ import GlobalStyle from "../GlobalStyle.js";
 import GlobalAsset from "../GlobalAsset.js";
 
 import auth from "../firebase/config.js";
-import loginUser from "../services/userLogin.js";
+import loginUser from "../services/loginUser.js"
 export default function SignIn({ navigation }) {
   // console.log(auth);
   const [phoneNumber, onChangePhoneNumber] = useState("");

@@ -2,9 +2,8 @@ import { useRoute } from "@react-navigation/native";
 import { View, Text, Pressable } from "react-native";
 import React from "react";
 import GlobalStyle from "../GlobalStyle";
-import addFriendUser from "../services/addFriendUser";
-import addRequestSend from "../services/addRequestSend";
-import addRequestGet from "../services/addRequestGet";
+import addRequestSend from "../services/addRequestSend.js";
+import addRequestGet from "../services/addRequestGet.js";
 export default function FindingUser({ navigation }) {
   const route = useRoute();
   const userSend = route.params?.userSend;

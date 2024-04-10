@@ -4,7 +4,7 @@ import config from "../firebase/config.js";
 import ChatUser from "./ChatUser";
 import React, { useState } from "react";
 import { useRoute } from "@react-navigation/native";
-import findUserByPhoneNumber from "../services/findUserByPhoneNumber.js";
+import findUserByPhoneNumber from "../services/findUserByPhoneNumber.js"
 
 import GlobalStyle from "../GlobalStyle.js";
 
