@@ -2,7 +2,7 @@ import { View, Text, Image, Pressable, TextInput, ScrollView } from 'react-nativ
 import { signInWithPhoneNumber } from "firebase/auth";
 import { useRoute } from "@react-navigation/native";
 import React, { useState } from 'react';
-// import registerUser from "../services/registerUser.js";
+import registerUser from "../services/registerUser.js";
 import config from "../firebase/config.js";
 
 import GlobalStyle from '../GlobalStyle.js';
@@ -23,11 +23,11 @@ export default function OTP({ navigation }) {
   const formatPh = otps.formatPh;
   const appVerifier = otps.appVerifier;
 
+  console.log(signInWithPhoneNumber)
+
   const handleSignUp = async () => {
     try {
-      // Gọi API đăng ký
-      // await registerUser(user.name, user.phoneNumber, user.password, user.email);
-      // Đăng ký thành công, chuyển hướng đến màn hình đăng nhập
+      await registerUser(user.name, user.phoneNumber, user.password, user.email);
     } catch (error) {
       console.error("Registration error:", error);
     }
@@ -43,7 +43,6 @@ export default function OTP({ navigation }) {
         window.confirmationResult = confirmationResult;
         alerts.alert = "OTP sended successfully!";
         setAlerts(alerts);
-        // console.log("OTP sended successfully!");
       })
       .catch((error) => {
         errors.error = "Error sending OTP: " + error;
@@ -51,17 +50,13 @@ export default function OTP({ navigation }) {
         console.error("Error sending OTP: " + error);
       });
     console.log("222");
-
   }
 
   function onOTPVerify() {
     window.confirmationResult
       .confirm(OTP)
       .then(async (res) => {
-        // addUser(user);
-        console.log("---------------------------");
         handleSignUp();
-        console.log("===========================");
         navigation.navigate("Login");
       })
       .catch((error) => {
@@ -71,25 +66,11 @@ export default function OTP({ navigation }) {
       });
   }
 
-  // const addUser = async (user) => {
-  //   try {
-  //     const docRef = await addDoc(collection(db, "users"), {
-  //       displayName: user.displayName, 
-  //       phoneNumber: user.phoneNumber, 
-  //       photoURL: user.photoURL ? user.photoURL : "default", 
-  //       password: user.password
-  //     });
-  //     // console.log("Document written with ID: ", docRef.id);
-  //   } catch (e) {
-  //     console.error("Error adding document: ", e);
-  //   }
-  // }
-
   return (
     <ScrollView contentContainerStyle={styles.flexGrow1}>
       <View style={styles.container}>
         <View style={[styles.marginSide]}>
-          {/* <Image source={GlobalAsset.logo} style={styles.logo}></Image> */}
+          <Image source={GlobalAsset.logo} style={styles.logo}></Image>
         </View>
         
         <Text style={[styles.title, styles.marginSide, styles.fontColor]}>Welcome, {user.displayName}</Text>

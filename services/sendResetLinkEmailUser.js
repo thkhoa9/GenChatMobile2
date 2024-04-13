@@ -5,16 +5,16 @@ const sendResetLinkEmail = async (email) => {
     const userData = {
       email: email
     };
-    const response = await axios.post("http://192.168.34.17:6969/users/sendResetLinkEmail", userData);
+    const response = await axios.post("http://172.20.10.2:6969/users/sendResetLinkEmail", userData);
     if (response.status === 200) {
-      console.log("Registration successful:", response.data);
+      console.log("Send reset link email successful:", response.data);
       return response.data;
     } else {
-      console.error("Registration failed:", response.data);
-      throw new Error("Registration failed");
+      console.error("Send reset link email failed:", response.data);
+      throw new Error("Send reset link email failed");
     }
   } catch (error) {
-    console.error("Registration error:", error);
+    console.error("Send reset link email error:", error);
     throw new Error(error);
   }
 };

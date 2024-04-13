@@ -6,19 +6,19 @@ const addRequestGet = async (phoneNumberUserSend, phoneNumberUserGet) => {
       phoneNumberUserGet: phoneNumberUserGet,
     };
     const response = await axios.post(
-      "http://192.168.34.17:6969/users/removeFriend",
+      "http://172.20.10.2:6969/users/removeFriend",
       userData
     );
     if (response.status === 200) {
-      console.log("Found successful:", response.data);
+      console.log("Remove friend successful:", response.data);
 
       return response.data;
     } else {
-      console.error("Found failed:", response.data);
-      throw new Error("Found failed");
+      console.error("Remove friend failed:", response.data);
+      throw new Error("Remove friend failed");
     }
   } catch (error) {
-    console.error("Found error:", error);
+    console.error("Remove friend error:", error);
     throw new Error(error);
   }
 };

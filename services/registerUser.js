@@ -20,7 +20,7 @@ const registerUser = async (
       listFriend,
     };
     const response = await axios.post(
-      "http://192.168.34.17:6969/users/register",
+      "http://172.20.10.2:6969/users/register",
       userData
     );
     if (response.status === 200) {

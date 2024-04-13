@@ -13,11 +13,12 @@ export default function Profile({ navigation }) {
   const styles = GlobalStyle();
     
   const appSignOut = () => {
-    signOut(auth).then(() => {
-      navigation.navigate('Sign In', {user: null});
-    }).catch((error) => {
-      console.log(error);
-    });
+    // signOut(auth).then(() => {
+    //   navigation.navigate('Sign In', {user: null});
+    // }).catch((error) => {
+    //   console.log(error);
+    // });
+    navigation.navigate('Sign In', {user: null});
   }
   
   return (

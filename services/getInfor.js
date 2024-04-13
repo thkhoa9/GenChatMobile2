@@ -5,19 +5,19 @@ const getInfor = async (phoneNumber) => {
       phoneNumber: phoneNumber,
     };
     const response = await axios.post(
-      "http://192.168.34.17:6969/users/getInfor",
+      "http://172.20.10.2:6969/users/getInfor",
       userData
     );
     if (response.status === 200) {
-      console.log("Get request send successfully!:", response.data);
+      console.log("Get info successfully!:", response.data);
 
       return response.data;
     } else {
-      console.error("Get request send failed:", response.data);
-      throw new Error("Get request send failed");
+      console.error("Get info send failed:", response.data);
+      throw new Error("Get info send failed");
     }
   } catch (error) {
-    console.error("Get request send error:", error);
+    console.error("Get info send error:", error);
     throw new Error(error);
   }
 };

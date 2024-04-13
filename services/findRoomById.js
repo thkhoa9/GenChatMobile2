@@ -5,19 +5,19 @@ const findRoomByRoomId = async (roomId) => {
         roomId: roomId
     };
     const response = await axios.post(
-      "http://192.168.34.17:6969/rooms/findRoomByRoomId",
+      "http://172.20.10.2:6969/rooms/findRoomByRoomId",
       userData
     );
     if (response.status === 200) {
-      console.log("Found successful:", response.data);
+      console.log("Found room successful:", response.data);
 
       return response.data;
     } else {
-      console.error("Found failed:", response.data);
-      throw new Error("Found failed");
+      console.error("Found room failed:", response.data);
+      throw new Error("Found room failed");
     }
   } catch (error) {
-    console.error("Found error:", error);
+    console.error("Found room error:", error);
     throw new Error(error);
   }
 };

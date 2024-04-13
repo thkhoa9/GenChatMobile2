@@ -5,19 +5,19 @@ const findRoomByManyPhoneNumber = async (users) => {
       users: users
     };
     const response = await axios.post(
-      "http://192.168.34.17:6969/rooms/findRoomByManyPhoneNumber",
+      "http://172.20.10.2:6969/rooms/findRoomByManyPhoneNumber",
       userData
     );
     if (response.status === 200) {
-      console.log("Found successful:", response.data);
+      console.log("Found room by many phone successful:", response.data);
 
       return response.data;
     } else {
-      console.error("Found failed:", response.data);
-      throw new Error("Found failed");
+      console.error("Found room by many phone failed:", response.data);
+      throw new Error("Found room by many phone failed");
     }
   } catch (error) {
-    console.error("Found error:", error);
+    console.error("Found room by many phone error:", error);
     throw new Error(error);
   }
 };

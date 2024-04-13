@@ -5,7 +5,7 @@ const loginUser = async (phoneNumber, password) => {
         phoneNumber: phoneNumber,
         password: password,
       };
-      const response = await axios.post("http://192.168.34.17:6969/users/login", userData);
+      const response = await axios.post("http://172.20.10.2:6969/users/login", userData);
       if (response.status === 200) {
         console.log("Login successful:", response.data);
         

@@ -8,7 +8,7 @@ import GlobalStyle from '../GlobalStyle.js';
 import GlobalAsset from '../GlobalAsset.js';
 
 import config from '../firebase/config.js';
-// import sendResetLinkEmail from '../services/sendResetLinkEmailUser.js';
+import sendResetLinkEmail from '../services/sendResetLinkEmailUser.js';
 
 export default function ForgotPassword({ navigation }) {
   const [email, setEmail] = useState('');
@@ -76,15 +76,15 @@ export default function ForgotPassword({ navigation }) {
   //   errors.error = 'Phone number does not exists';
   //   setErrors(errors);
   // }
-  // const handleSendResetLinkEmail = async () => {
-  //   try {
-  //     const user = await sendResetLinkEmail(email);
-  //     // Đăng ký thành công, chuyển hướng đến màn hình đăng nhập
-  //     navigation.navigate("Main", {user});
-  //   } catch (error) {
-  //     console.error("Registration error:", error);
-  //   }
-  // };
+  const handleSendResetLinkEmail = async () => {
+    try {
+      const user = await sendResetLinkEmail(email);
+      // Đăng ký thành công, chuyển hướng đến màn hình đăng nhập
+      navigation.navigate("Main", {user});
+    } catch (error) {
+      console.error("Registration error:", error);
+    }
+  };
   return (
     <ScrollView contentContainerStyle={styles.flexGrow1}>
       <View style={styles.container}>
@@ -109,9 +109,7 @@ export default function ForgotPassword({ navigation }) {
           />
         </View>
 
-        <Pressable style={[styles.btnSubmitWrapper, styles.marginSide]} 
-        // onPress={handleSendResetLinkEmail}
-        >
+        <Pressable style={[styles.btnSubmitWrapper, styles.marginSide]} onPress={handleSendResetLinkEmail}>
           <Text style={styles.btnSubmit}>Submit</Text>
         </Pressable>
 
